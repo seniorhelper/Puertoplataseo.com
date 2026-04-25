@@ -157,8 +157,8 @@
       flex-shrink: 0;
     }
     .header-logo img {
-      height: 58px;
-      width: 220px;
+      height: 64px;
+      width: 260px;
       object-fit: contain;
       object-position: left center;
       display: block;
@@ -167,6 +167,7 @@
       display: flex;
       align-items: center;
       gap: 24px;
+      flex-shrink: 0;
     }
     .header-nav a {
       text-decoration: none;
@@ -180,13 +181,14 @@
     .header-cta {
       background: linear-gradient(135deg, var(--amber), var(--amber-dark));
       color: var(--teal-deep) !important;
-      padding: 10px 22px;
+      padding: 11px 20px;
       border-radius: var(--radius-sm);
       font-weight: 700 !important;
       font-size: 13px !important;
       text-decoration: none !important;
       transition: all 0.2s;
       white-space: nowrap;
+      flex-shrink: 0;
     }
     .header-cta:hover {
       transform: translateY(-1px);
@@ -213,6 +215,7 @@
       object-fit: cover;
       display: block;
     }
+    /* Video slowdown handled via JS playbackRate below */
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -750,6 +753,27 @@
       font-size: 100px;
       opacity: 0.07;
     }
+    .barter-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: start;
+    }
+    .barter-cards-col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 180px;
+    }
+    .barter-card-item {
+      background: var(--glass-white);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-align: center;
+    }
+    .barter-card-item .bci-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+    .barter-card-item p { font-size: 0.82rem; color: var(--amber); font-weight: 600; }
 
     /* ── CHART / BARS ── */
     .bar-chart { margin-top: 28px; }
@@ -1047,8 +1071,8 @@
     }
     .footer-logo {
       display: block;
-      height: 54px;
-      width: 220px;
+      height: 80px;
+      width: 300px;
       object-fit: contain;
       object-position: left center;
       margin-bottom: 18px;
@@ -1118,12 +1142,16 @@
       .two-col, .services-grid, .mindset-grid { grid-template-columns: 1fr; gap: 32px; }
       .stats-bar-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .barter-inner { grid-template-columns: 1fr; gap: 28px; }
+      .barter-cards-col { flex-direction: row; flex-wrap: wrap; justify-content: center; min-width: unset; }
+      .barter-card-item { flex: 1; min-width: 140px; }
     }
     @media (max-width: 768px) {
-      :root { --header-h: 70px; }
-      header { padding: 0 16px; }
-      .header-logo img { width: 180px; height: 48px; }
+      :root { --header-h: 80px; }
+      header { padding: 0 14px; gap: 10px; }
+      .header-logo img { width: 200px; height: 60px; }
       .header-nav a:not(.header-cta) { display: none; }
+      .header-cta { font-size: 12px !important; padding: 10px 14px; }
       .hero-content { padding: 40px 20px 130px; }
       .hero-nav-buttons { flex-direction: column; }
       .hero-stats-strip { flex-wrap: wrap; }
@@ -1132,6 +1160,7 @@
       .form-row { grid-template-columns: 1fr; }
       .form-wrap { padding: 28px 20px; }
       .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-logo { height: 72px; width: 260px; }
       .process-steps { grid-template-columns: 1fr; }
       .process-step::after { display: none; }
       .slant-down, .slant-up, .slant-both {
@@ -1140,13 +1169,18 @@
         padding-bottom: 60px !important;
         margin-top: 0 !important;
       }
-      .barter-section { padding: 32px 24px; }
+      .barter-section { padding: 28px 20px; }
+      .barter-inner { grid-template-columns: 1fr; gap: 24px; }
+      .barter-cards-col { flex-direction: row; flex-wrap: wrap; justify-content: center; min-width: unset; }
+      .barter-card-item { flex: 1; min-width: 120px; }
       .mindset-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .hero h1 { font-size: 2.1rem; }
       .stats-bar-inner { grid-template-columns: 1fr 1fr; }
       .stat-item strong { font-size: 2rem; }
+      .header-logo img { width: 180px; height: 54px; }
+      .footer-logo { height: 64px; width: 230px; }
     }
   </style>
 </head>
@@ -1696,30 +1730,28 @@
   <section class="bg-deep" id="barter">
     <div class="container">
       <div class="barter-section fade-in">
-        <div style="display:grid; grid-template-columns:1fr auto; gap:40px; align-items:start;">
+        <div class="barter-inner">
           <div>
             <div class="section-label" style="margin-bottom:16px;">🤝 <span data-en="Something Different" data-es="Algo Diferente">Something Different</span></div>
             <h2 style="font-size:clamp(1.7rem,3vw,2.4rem);" data-en="Not Ready to Pay Cash? <span class='accent'>Let's Talk Trade.</span>" data-es="¿No Estás Listo para Pagar en Efectivo? <span class='accent'>Hablemos de Trueque.</span>">Not Ready to Pay Cash? <span class="accent">Let's Talk Trade.</span></h2>
-            <p style="color:var(--text-soft); line-height:1.82; margin-bottom:16px; font-size:1rem; max-width:680px;" data-en="The owner of Eye To Ad Media is a genuine advocate for the art of the deal — and sometimes the best deals aren't paid in cash. We're open to barter arrangements, especially with real estate owners, property developers, and business owners who have something of value to offer in exchange for world-class digital marketing." data-es="El propietario de Eye To Ad Media es un verdadero defensor del arte de negociar — y a veces los mejores tratos no se pagan en efectivo. Estamos abiertos a acuerdos de trueque, especialmente con propietarios de bienes raíces, promotores inmobiliarios y dueños de negocios que tienen algo de valor para ofrecer a cambio de marketing digital de clase mundial.">The owner of Eye To Ad Media is a genuine advocate for the art of the deal — and sometimes the best deals aren't paid in cash. We're open to barter arrangements, especially with real estate owners, property developers, and business owners who have something of value to offer in exchange for world-class digital marketing.</p>
-            <p style="color:var(--text-soft); line-height:1.82; margin-bottom:24px; font-size:1rem; max-width:680px;" data-en="Got a condo in Sosúa? A piece of land near Cabarete? A business service, equipment, or asset with real value? We're willing to have a conversation. Not every deal looks the same — and that's exactly how we like it." data-es="¿Tienes un condominio en Sosúa? ¿Un terreno cerca de Cabarete? ¿Un servicio comercial, equipo o activo con valor real? Estamos dispuestos a tener una conversación. No todos los tratos son iguales — y así es exactamente como nos gusta.">Got a condo in Sosúa? A piece of land near Cabarete? A business service, equipment, or asset with real value? We're willing to have a conversation. Not every deal looks the same — and that's exactly how we like it.</p>
-            <div style="display:flex; gap:12px; flex-wrap:wrap;">
-              <a href="mailto:sales@eyetoad.com?subject=Barter Inquiry — Puerto Plata SEO" class="btn-cta" style="display:inline-block; text-decoration:none; padding:13px 24px;">
-                🤝 <span data-en="Discuss a Barter Arrangement" data-es="Hablar de un Acuerdo de Trueque">Discuss a Barter Arrangement</span>
-              </a>
-            </div>
+            <p style="color:var(--text-soft); line-height:1.82; margin-bottom:16px; font-size:1rem;" data-en="The owner of Eye To Ad Media is a genuine advocate for the art of the deal — and sometimes the best deals aren't paid in cash. We're open to barter arrangements, especially with real estate owners, property developers, and business owners who have something of real value to offer in exchange for world-class digital marketing." data-es="El propietario de Eye To Ad Media es un verdadero defensor del arte de negociar — y a veces los mejores tratos no se pagan en efectivo. Estamos abiertos a acuerdos de trueque, especialmente con propietarios de bienes raíces, promotores inmobiliarios y dueños de negocios que tienen algo de valor para ofrecer a cambio de marketing digital de clase mundial.">The owner of Eye To Ad Media is a genuine advocate for the art of the deal — and sometimes the best deals aren't paid in cash. We're open to barter arrangements, especially with real estate owners, property developers, and business owners who have something of real value to offer in exchange for world-class digital marketing.</p>
+            <p style="color:var(--text-soft); line-height:1.82; margin-bottom:24px; font-size:1rem;" data-en="Got a condo in Sosúa? A piece of land near Cabarete? A business service, equipment, or asset with real value? We're willing to have a conversation. Not every deal looks the same — and that's exactly how we like it." data-es="¿Tienes un condominio en Sosúa? ¿Un terreno cerca de Cabarete? ¿Un servicio comercial, equipo o activo con valor real? Estamos dispuestos a tener una conversación. No todos los tratos son iguales — y así es exactamente como nos gusta.">Got a condo in Sosúa? A piece of land near Cabarete? A business service, equipment, or asset with real value? We're willing to have a conversation. Not every deal looks the same — and that's exactly how we like it.</p>
+            <a href="mailto:sales@eyetoad.com?subject=Barter Inquiry — Puerto Plata SEO" class="btn-cta" style="display:inline-block; text-decoration:none; padding:13px 28px; width:auto;">
+              🤝 <span data-en="Discuss a Barter Arrangement" data-es="Hablar de un Acuerdo de Trueque">Discuss a Barter Arrangement</span>
+            </a>
           </div>
-          <div style="display:flex; flex-direction:column; gap:14px; min-width:200px;">
-            <div style="background:var(--glass-white); border:1px solid rgba(245,158,11,0.2); border-radius:var(--radius-md); padding:18px; text-align:center;">
-              <div style="font-size:28px; margin-bottom:8px;">🏠</div>
-              <p style="font-size:0.82rem; color:var(--amber); font-weight:600;" data-en="Real Estate" data-es="Bienes Raíces">Real Estate</p>
+          <div class="barter-cards-col">
+            <div class="barter-card-item">
+              <span class="bci-icon">🏠</span>
+              <p data-en="Real Estate" data-es="Bienes Raíces">Real Estate</p>
             </div>
-            <div style="background:var(--glass-white); border:1px solid rgba(245,158,11,0.2); border-radius:var(--radius-md); padding:18px; text-align:center;">
-              <div style="font-size:28px; margin-bottom:8px;">🛠️</div>
-              <p style="font-size:0.82rem; color:var(--amber); font-weight:600;" data-en="Services & Skills" data-es="Servicios y Habilidades">Services & Skills</p>
+            <div class="barter-card-item">
+              <span class="bci-icon">🛠️</span>
+              <p data-en="Services & Skills" data-es="Servicios y Habilidades">Services & Skills</p>
             </div>
-            <div style="background:var(--glass-white); border:1px solid rgba(245,158,11,0.2); border-radius:var(--radius-md); padding:18px; text-align:center;">
-              <div style="font-size:28px; margin-bottom:8px;">💼</div>
-              <p style="font-size:0.82rem; color:var(--amber); font-weight:600;" data-en="Business Assets" data-es="Activos Comerciales">Business Assets</p>
+            <div class="barter-card-item">
+              <span class="bci-icon">💼</span>
+              <p data-en="Business Assets" data-es="Activos Comerciales">Business Assets</p>
             </div>
           </div>
         </div>
@@ -1908,8 +1940,8 @@
           class="footer-logo"
           src="https://raw.githubusercontent.com/seniorhelper/Puertoplataseo.com/main/Images/eye-to-ad-media-logo-denver-seo%20(3).png"
           alt="Eye To Ad Media — SEO Puerto Plata"
-          width="220"
-          height="54"
+          width="300"
+          height="80"
         />
         <p data-en="Puerto Plata's premier SEO and digital marketing agency. We rank Puerto Plata businesses at the top of Google — hotels, restaurants, real estate, local services, and everything in between across the entire north coast." data-es="La premier agencia de SEO y marketing digital de Puerto Plata. Posicionamos negocios en la cima de Google — hoteles, restaurantes, bienes raíces y servicios locales en toda la costa norte.">Puerto Plata's premier SEO and digital marketing agency. We rank Puerto Plata businesses at the top of Google — hotels, restaurants, real estate, local services, and everything in between across the entire north coast.</p>
         <a href="mailto:sales@eyetoad.com" style="color:var(--amber-dark); font-size:13px; font-weight:600; text-decoration:none; display:block; margin-top:8px;">📧 sales@eyetoad.com</a>
@@ -2081,9 +2113,17 @@
     }
 
     // ─────────────────────────────────────
-    // FORM TIME STAMPS (bot detection helper)
+    // SLOW DOWN VIDEO — 0.35x speed (≈3× slower)
     // ─────────────────────────────────────
     window.addEventListener('DOMContentLoaded', () => {
+      const heroVideo = document.querySelector('.hero-video-wrap video');
+      if (heroVideo) {
+        heroVideo.playbackRate = 0.35;
+        heroVideo.addEventListener('canplay', () => {
+          heroVideo.playbackRate = 0.35;
+        });
+      }
+
       const now = Date.now().toString();
       const tf = document.getElementById('form-top-time');
       if (tf) tf.value = now;
@@ -2189,4 +2229,3 @@
 
 </body>
 </html>
-
