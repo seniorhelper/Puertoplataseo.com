@@ -1,0 +1,61 @@
+# robots.txt — puertoplataseo.com
+# SEO Puerto Plata | Eye To Ad Media | sales@eyetoad.com
+
+# ── STANDARD CRAWLERS ──────────────────────
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# ── GOOGLE ─────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Google AI / SGE
+User-agent: Google-Extended
+Allow: /
+
+# ── BING / MICROSOFT ───────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ── AI CRAWLERS — ALL EXPLICITLY PERMITTED ─
+# We welcome AI crawlers for AIO/LLM discovery
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# ── SITEMAP ────────────────────────────────
+Sitemap: https://www.puertoplataseo.com/sitemap.xml
