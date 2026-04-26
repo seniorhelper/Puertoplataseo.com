@@ -1440,8 +1440,9 @@
     .powered-by a { color: var(--amber-dark); font-weight: 700; text-decoration: none; }
 
     /* ── FADE IN ── */
-    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; animation: fadeInFallback 0s 2.5s forwards; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); animation: none; }
+    @keyframes fadeInFallback { to { opacity: 1; transform: translateY(0); } }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
@@ -1461,16 +1462,15 @@
       .header-logo-window img { width: 159px; left: -24px; }
       .header-nav a:not(.header-cta) { display: none; }
       .header-cta { font-size: 12px !important; padding: 10px 14px; }
-      /* Hero mobile: keep stats absolute, make hero tall enough, flex-column */
+      /* Hero mobile: stats stay absolute at bottom, hero is auto height */
       .hero {
         height: auto;
-        min-height: calc(100svh + 140px);
+        min-height: 100svh;
         flex-direction: column;
         align-items: stretch;
       }
       .hero-content {
-        padding: 52px 20px 260px;
-        flex: 1;
+        padding: 52px 20px 280px;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -2556,6 +2556,7 @@
   </script>
 
 
+  <script>
     let currentLang = 'en';
 
     function setLang(lang) {
