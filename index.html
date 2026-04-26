@@ -170,9 +170,9 @@
     }
 
     /* ── LOGO — precision clipping-window technique ── */
-    /* PNG 1050×278px total. Art region: x:175–940, y:35–243 (765×208px).
-       Scale = display_h / 278. img_w = 1050*scale. left = -(175*scale). art_w = 765*scale.
-       Desktop: 62px height → img=234px, left=-39px, container=171×62px */
+    /* PNG 1050×278px total. Art region: x:160–940, y:35–243 (780×208px).
+       Scale = display_h / 278. img_w = 1050*scale. left = -(160*scale). art_w = 780*scale.
+       Desktop: 56px height → img=212px, left=-32px, container=157×56px */
     .header-logo {
       display: flex;
       align-items: center;
@@ -180,18 +180,18 @@
       flex-shrink: 0;
     }
     .header-logo-window {
-      width: 171px;
-      height: 62px;
+      width: 157px;
+      height: 56px;
       overflow: hidden;
       position: relative;
       flex-shrink: 0;
     }
     .header-logo-window img {
       position: absolute;
-      width: 234px;
+      width: 212px;
       height: auto;
       top: 50%;
-      left: -39px;
+      left: -32px;
       transform: translateY(-50%);
       display: block;
     }
@@ -1388,21 +1388,21 @@
       max-width: 1160px;
       margin: 0 auto 48px;
     }
-    /* Footer logo: 50px height. Scale=50/278=0.180.
-       img_w=189px, left=-32px (175×0.180), art_w=138px (765×0.180). */
+    /* Footer logo: 44px height. Scale=44/278=0.158.
+       img_w=166px, left=-25px (160×0.158), art_w=123px (780×0.158). */
     .footer-logo-window {
-      width: 138px;
-      height: 50px;
+      width: 123px;
+      height: 44px;
       overflow: hidden;
       position: relative;
       margin-bottom: 18px;
     }
     .footer-logo-window img {
       position: absolute;
-      width: 189px;
+      width: 166px;
       height: auto;
       top: 50%;
-      left: -32px;
+      left: -25px;
       transform: translateY(-50%);
       display: block;
     }
@@ -1457,25 +1457,42 @@
       :root { --header-h: 90px; }
       header { padding: 0 14px; gap: 10px; }
       /* Header logo: 46px height. Scale=46/278=0.165. img_w=174px, left=-29px, art_w=126px */
-      .header-logo-window { width: 126px; height: 46px; }
-      .header-logo-window img { width: 174px; left: -29px; }
+      .header-logo-window { width: 118px; height: 42px; }
+      .header-logo-window img { width: 159px; left: -24px; }
       .header-nav a:not(.header-cta) { display: none; }
       .header-cta { font-size: 12px !important; padding: 10px 14px; }
-      /* Hero: stats strip pulled into flow on mobile - see hero CSS below */
-      .hero { height: auto; min-height: 100svh; }
-      .hero-stats-strip { position: relative; bottom: auto; left: auto; right: auto; }
+      /* Hero mobile: keep stats absolute, make hero tall enough, flex-column */
+      .hero {
+        height: auto;
+        min-height: calc(100svh + 140px);
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-content {
+        padding: 52px 20px 260px;
+        flex: 1;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .hero-stats-strip {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        flex-wrap: wrap;
+      }
       .hero-stat { flex: 0 0 50%; max-width: 50%; padding: 14px 12px; border-right: none; border-bottom: 1px solid var(--glass-border); }
       .hero-stat:nth-child(odd) { border-right: 1px solid var(--glass-border); }
-      .hero-stat:last-child, .hero-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
-      .hero-content { padding: 52px 20px 32px; }
+      .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
       .hero-nav-buttons { flex-direction: column; margin-bottom: 20px; gap: 10px; }
       section { padding: 60px 0; }
       .form-row { grid-template-columns: 1fr; }
       .form-wrap { padding: 28px 20px; }
       .footer-grid { grid-template-columns: 1fr; gap: 28px; }
       /* Footer logo: 42px height. Scale=42/278=0.151. img_w=158px, left=-26px, art_w=116px */
-      .footer-logo-window { width: 116px; height: 42px; }
-      .footer-logo-window img { width: 158px; left: -26px; }
+      .footer-logo-window { width: 107px; height: 38px; }
+      .footer-logo-window img { width: 144px; left: -22px; }
       .process-steps { grid-template-columns: 1fr; }
       .process-step::after { display: none; }
       .slant-down, .slant-up, .slant-both {
@@ -1497,11 +1514,11 @@
       .stats-bar-inner { grid-template-columns: 1fr 1fr; }
       .stat-item strong { font-size: 2rem; }
       /* Header logo: 40px height. Scale=40/278=0.144. img_w=151px, left=-25px, art_w=110px */
-      .header-logo-window { width: 110px; height: 40px; }
-      .header-logo-window img { width: 151px; left: -25px; }
+      .header-logo-window { width: 101px; height: 36px; }
+      .header-logo-window img { width: 136px; left: -21px; }
       /* Footer logo: 36px height. Scale=36/278=0.129. img_w=136px, left=-23px, art_w=99px */
-      .footer-logo-window { width: 99px; height: 36px; }
-      .footer-logo-window img { width: 136px; left: -23px; }
+      .footer-logo-window { width: 90px; height: 32px; }
+      .footer-logo-window img { width: 121px; left: -18px; }
     }
     /* ── WHATSAPP FLOATING BUTTON ── */
     .wa-fab {
@@ -2608,8 +2625,8 @@
     window.addEventListener('DOMContentLoaded', () => {
       const heroVideo = document.querySelector('.hero-video-wrap video');
       if (heroVideo) {
-        heroVideo.playbackRate = 0.35;
-        heroVideo.addEventListener('canplay', () => { heroVideo.playbackRate = 0.35; });
+        heroVideo.playbackRate = 0.15;
+        heroVideo.addEventListener('canplay', () => { heroVideo.playbackRate = 0.15; });
       }
       const now = Date.now().toString();
       const tfTop = document.getElementById('form-top-time');
