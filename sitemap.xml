@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://www.puertoplataseo.com/</loc>
     <lastmod>2026-04-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.puertoplataseo.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.puertoplataseo.com/es/"/>
+
+    <!-- Hero background photo -->
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/seniorhelper/Puertoplataseo.com/main/Images/PXL_20260425_105926580.jpg</image:loc>
+      <image:title>Puerto Plata North Coast — Eye To Ad Media SEO Agency</image:title>
+      <image:caption>Puerto Plata's premier SEO and AIO digital marketing agency, serving businesses across the north coast Dominican Republic.</image:caption>
+      <image:geo_location>Puerto Plata, Dominican Republic</image:geo_location>
+    </image:image>
+
+    <!-- Second site photo -->
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/seniorhelper/Puertoplataseo.com/main/Images/PXL_20260425_105932937.jpg</image:loc>
+      <image:title>Puerto Plata SEO — Eye To Ad Media Digital Marketing</image:title>
+      <image:caption>Eye To Ad Media ranks Puerto Plata businesses at the top of Google, ChatGPT, Claude, and Perplexity.</image:caption>
+      <image:geo_location>Puerto Plata, Dominican Republic</image:geo_location>
+    </image:image>
+
+    <!-- Agency logo -->
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/seniorhelper/Puertoplataseo.com/main/Images/eye-to-ad-media-logo-denver-seo%20(3).png</image:loc>
+      <image:title>Eye To Ad Media Logo — SEO Agency Puerto Plata</image:title>
+      <image:caption>Eye To Ad Media — Puerto Plata SEO, AIO, and digital marketing agency logo.</image:caption>
+    </image:image>
+
   </url>
 
 </urlset>
