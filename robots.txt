@@ -1,5 +1,5 @@
 # robots.txt — puertoplataseo.com
-# SEO Puerto Plata | Eye To Ad Media | sales@eyetoad.com
+# SEO Puerto Plata | Eye To Ad Media
 
 # ── STANDARD CRAWLERS ──────────────────────
 User-agent: *
