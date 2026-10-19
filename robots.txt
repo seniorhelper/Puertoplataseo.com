@@ -58,4 +58,4 @@ User-agent: ia_archiver
 Allow: /
 
 # ── SITEMAP ────────────────────────────────
-Sitemap: https://www.puertoplataseo.com/sitemap.xml
+Sitemap: https://puertoplataseo.com/sitemap.xml

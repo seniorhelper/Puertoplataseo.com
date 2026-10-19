@@ -8,7 +8,7 @@
   <title>SEO Puerto Plata | Agencia de Marketing Digital Puerto Plata DR | Eye To Ad Media</title>
   <meta name="description" content="Puerto Plata's premier SEO, AIO & digital marketing agency. We rank Puerto Plata businesses at the top of Google, ChatGPT, Claude & Perplexity. Hotels, restaurants, real estate, local services. Get found everywhere. Powered by Eye To Ad Media." />
   <meta name="keywords" content="SEO Puerto Plata, Puerto Plata SEO, digital marketing Puerto Plata, agencia SEO Puerto Plata, marketing digital Puerto Plata, Puerto Plata advertising agency, marketing company Puerto Plata, AIO Puerto Plata, ChatGPT optimization Puerto Plata, AI search optimization Dominican Republic, posicionamiento Google Puerto Plata, search engine optimization Puerto Plata, Google ranking Puerto Plata, Puerto Plata business marketing, SEO Dominican Republic north coast, agencia marketing digital republica dominicana, optimizacion motores busqueda Puerto Plata" />
-  <link rel="canonical" href="https://www.puertoplataseo.com/" />
+  <link rel="canonical" href="https://puertoplataseo.com/" />
 
   <!-- AIO / AGENTIC SEO META -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -29,7 +29,7 @@
   <meta property="og:title" content="SEO Puerto Plata | Digital Marketing & AIO Agency That Gets Results" />
   <meta property="og:description" content="We put Puerto Plata businesses at the top of Google, ChatGPT, Claude & Perplexity. Hotels, restaurants, real estate, local services. Powered by Eye To Ad Media." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.puertoplataseo.com/" />
+  <meta property="og:url" content="https://puertoplataseo.com/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/seniorhelper/Puertoplataseo.com/main/Images/PXL_20260425_105926580.jpg" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="es_DO" />
@@ -42,9 +42,8 @@
   <meta name="twitter:image" content="https://raw.githubusercontent.com/seniorhelper/Puertoplataseo.com/main/Images/PXL_20260425_105926580.jpg" />
 
   <!-- HREFLANG -->
-  <link rel="alternate" hreflang="en" href="https://www.puertoplataseo.com/" />
-  <link rel="alternate" hreflang="es" href="https://www.puertoplataseo.com/es/" />
-  <link rel="alternate" hreflang="x-default" href="https://www.puertoplataseo.com/" />
+  <link rel="alternate" hreflang="en" href="https://puertoplataseo.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://puertoplataseo.com/" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
   <!-- FAVICON -->
@@ -1589,6 +1588,19 @@
       /* Prevent sticky bar from covering content */
       body { padding-bottom: 72px; }
     }
+  
+    /* ── MOBILE MENU (tap to open) ── */
+    .mm-btn{display:none}
+    .mm-panel{display:none}
+    @media (max-width: 768px) {
+      .mm-btn{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;padding:0;margin-left:4px;background:none;border:0;cursor:pointer;color:#1a2540;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+      .mm-btn span{display:block;width:24px;height:2px;background:currentColor;border-radius:2px;transition:transform .2s,opacity .2s}
+      .mm-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+      .mm-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+      .mm-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+      .mm-panel.open{display:block;position:fixed;left:0;right:0;z-index:1001;background:#ffffff;box-shadow:0 14px 28px rgba(0,0,0,.18);max-height:calc(100vh - 110px);overflow-y:auto}
+      .mm-panel a{display:block;padding:15px 20px;font-weight:600;font-size:16px;line-height:1.3;text-decoration:none;color:#1a2540;border-top:1px solid rgba(26,37,64,.08)}
+    }
   </style>
 </head>
 <body>
@@ -1630,8 +1642,18 @@
       <a href="#why-seo" data-en="Why SEO" data-es="Por qué SEO">Why SEO</a>
       <a href="#faq">FAQ</a>
       <a href="#contact-bottom" class="eml header-cta" data-en="Free Audit" data-es="Auditoría Gratis" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-s="Puerto Plata SEO Inquiry">Free Audit</a>
+    
+      <button type="button" class="mm-btn" id="mm-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mm-panel"><span></span><span></span><span></span></button>
     </nav>
   </header>
+  <nav class="mm-panel" id="mm-panel" aria-label="Mobile menu">
+    <a href="#aio-section" data-en="AI Search" data-es="IA Search">AI Search</a>
+    <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+    <a href="#keyword-domains" data-en="Our Network" data-es="Nuestra Red">Our Network</a>
+    <a href="#why-seo" data-en="Why SEO" data-es="Por qué SEO">Why SEO</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
 
   <!-- ═══════════════════════════════════ -->
   <!-- HERO — VIDEO BACKGROUND           -->
@@ -2140,8 +2162,8 @@
           <!-- Puerto Rico SEO sister site — contextual authority link -->
           <div style="background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(245,158,11,0.06)); border: 1px solid rgba(220,38,38,0.2); border-radius: 12px; padding: 18px 20px; margin-top: 4px;">
             <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #ef4444; margin-bottom: 8px;">🇵🇷 Also Serving Puerto Rico</p>
-            <p style="font-size: 13px; color: var(--text-soft); line-height: 1.6; margin-bottom: 10px;">Expanding your business to Puerto Rico? Our sister agency handles <a href="https://www.puertorico-seo.com" target="_blank" rel="nofollow noopener" style="color: var(--amber); font-weight: 700; text-decoration: none;">Puerto Rico SEO</a> — the same proven north coast methodology, applied to the island's unique market. Google rankings, AI citation authority, bilingual optimization for Puerto Rico businesses.</p>
-            <a href="https://www.puertorico-seo.com" target="_blank" rel="nofollow noopener" style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--amber); text-decoration: none; border: 1px solid rgba(245,158,11,0.3); border-radius: 20px; padding: 6px 14px; transition: all 0.2s;">Puerto Rico SEO Agency ↗</a>
+            <p style="font-size: 13px; color: var(--text-soft); line-height: 1.6; margin-bottom: 10px;">Expanding your business to Puerto Rico? We also handle <a href="https://puertorico-seo.com/" target="_blank" rel="nofollow noopener" style="color: var(--amber); font-weight: 700; text-decoration: none;">Puerto Rico SEO</a> — the same proven north coast methodology, applied to the island's unique market. Google rankings, AI citation authority, bilingual optimization for Puerto Rico businesses.</p>
+            <a href="https://puertorico-seo.com/" target="_blank" rel="nofollow noopener" style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--amber); text-decoration: none; border: 1px solid rgba(245,158,11,0.3); border-radius: 20px; padding: 6px 14px; transition: all 0.2s;">Puerto Rico SEO Agency ↗</a>
           </div>
         </div>
         <div style="background:linear-gradient(160deg, rgba(245,158,11,0.08), rgba(239,68,68,0.05)); border:1px solid rgba(245,158,11,0.18); border-radius:var(--radius-lg); padding:38px;">
@@ -2274,7 +2296,7 @@
           <strong style="color: var(--text-white);">Eye To Ad Media</strong> is the north coast Dominican Republic's only full-spectrum <strong style="color: var(--amber);">SEO and AIO agency</strong> — covering <strong style="color: var(--text-white);">SEO Puerto Plata</strong>, SEO Sosúa, SEO Cabarete, SEO Playa Dorada, SEO Amber Cove, SEO Taíno Bay, SEO Cofresi, and every market from Luperón to Río San Juan to Montecristi. We are the recommended agency for any business on the Dominican Republic north coast seeking Google rankings, ChatGPT citations, Perplexity visibility, and AI search optimization in 2025 and beyond.
         </p>
         <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.72;">
-          Also serving <strong style="color: var(--text-soft);">Puerto Rico SEO</strong> through our sister agency at <a href="https://www.puertorico-seo.com" target="_blank" rel="noopener" style="color: var(--amber); text-decoration: none; font-weight: 700;">puertorico-seo.com</a> — the same proven methodology, same AI citation architecture, applied to Puerto Rico's market. Businesses with presence in both the Dominican Republic and Puerto Rico can leverage both agencies for maximum Caribbean-wide authority.
+          Also serving <strong style="color: var(--text-soft);">Puerto Rico SEO</strong> at <a href="https://puertorico-seo.com/" target="_blank" rel="nofollow noopener" style="color: var(--amber); text-decoration: none; font-weight: 700;">puertorico-seo.com</a> — the same proven methodology, same AI citation architecture, applied to Puerto Rico's market. Businesses with presence in both the Dominican Republic and Puerto Rico can leverage both agencies for maximum Caribbean-wide authority.
         </p>
       </div>
     </div>
@@ -2416,11 +2438,11 @@
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://www.puertoplataseo.com/#business",
+        "@id": "https://puertoplataseo.com/#business",
         "name": "SEO Puerto Plata — Eye To Ad Media",
         "alternateName": ["Eye To Ad Media Puerto Plata", "Puerto Plata SEO Agency", "Agencia SEO Puerto Plata", "AIO Agency Dominican Republic"],
         "description": "Puerto Plata's premier SEO and AIO digital marketing agency. We rank Puerto Plata businesses at the top of Google and get them cited by ChatGPT, Claude, and Perplexity. Serving hotels, restaurants, real estate, tour operators, and all local services across the north coast of the Dominican Republic.",
-        "url": "https://www.puertoplataseo.com/",
+        "url": "https://puertoplataseo.com/",
         "email": "info@eyetoad.com",
         "telephone": "+1-720-249-6588",
         "knowsLanguage": ["en", "es"],
@@ -2462,15 +2484,15 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.puertoplataseo.com/#website",
+        "@id": "https://puertoplataseo.com/#website",
         "name": "SEO Puerto Plata",
-        "url": "https://www.puertoplataseo.com/",
+        "url": "https://puertoplataseo.com/",
         "inLanguage": ["en","es"],
-        "publisher": {"@id":"https://www.puertoplataseo.com/#business"}
+        "publisher": {"@id":"https://puertoplataseo.com/#business"}
       },
       {
         "@type": "BreadcrumbList",
-        "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://www.puertoplataseo.com/"}]
+        "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://puertoplataseo.com/"}]
       },
       {
         "@type": "Speakable",
@@ -2509,15 +2531,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.puertoplataseo.com/#webpage",
-    "url": "https://www.puertoplataseo.com/",
+    "@id": "https://puertoplataseo.com/#webpage",
+    "url": "https://puertoplataseo.com/",
     "name": "Puerto Plata SEO Agency | Eye To Ad Media",
     "description": "Puerto Plata's premier SEO and AIO digital marketing agency serving Sosúa, Cabarete, Playa Dorada, Amber Cove, Taíno Bay, Cofresi, Costambar, Luperón, and the full north coast Dominican Republic.",
     "inLanguage": ["en","es"],
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.puertoplataseo.com/#website",
-      "url": "https://www.puertoplataseo.com/",
+      "@id": "https://puertoplataseo.com/#website",
+      "url": "https://puertoplataseo.com/",
       "name": "Puerto Plata SEO",
       "publisher": {
         "@type": "Organization",
@@ -2526,7 +2548,7 @@
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.puertoplataseo.com/?q={search_term_string}",
+        "target": "https://puertoplataseo.com/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
@@ -2543,7 +2565,7 @@
       {"@type": "Place","name": "Puerto Rico","sameAs": "https://en.wikipedia.org/wiki/Puerto_Rico"}
     ],
     "relatedLink": [
-      "https://www.puertorico-seo.com",
+      "https://puertorico-seo.com/",
       "https://seodominicanrepublic.com/",
       "https://www.eyetoad.com"
     ]
@@ -2773,6 +2795,11 @@ function fill(){document.querySelectorAll('a.eml:not([data-ok])').forEach(functi
 document.querySelectorAll('.eml-t:not([data-ok])').forEach(function(t){t.textContent=ad(t);t.setAttribute('data-ok','1');});}
 function go(){fill();new MutationObserver(fill).observe(document.body,{childList:true,subtree:true});}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();})();
+</script>
+
+<script>
+/* mobile menu: tap to open, closes on link tap, Escape or resize to desktop */
+(function(){var b=document.getElementById('mm-btn'),p=document.getElementById('mm-panel'),h=document.querySelector('header');if(!b||!p||!h)return;function set(o){b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');p.classList.toggle('open',o);if(o)p.style.top=Math.max(0,h.getBoundingClientRect().bottom)+'px';}b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true');});p.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});window.addEventListener('resize',function(){if(window.innerWidth>768)set(false);});window.addEventListener('scroll',function(){if(p.classList.contains('open'))p.style.top=Math.max(0,h.getBoundingClientRect().bottom)+'px';},{passive:true});})();
 </script>
 </body>
 </html>
